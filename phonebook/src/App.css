@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+  background-image: linear-gradient(to right, #000000, #191818, #1c1a1a, #262424, #1c1a1a, #191818, #000000);
+
+  color: white;
+  padding-top: 10px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  margin-left: 9px;
+  letter-spacing: 3px;
+}
+
+nav ul a:hover {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar button {
+  margin-right: 50px;
+  width: 95px;
+  padding: 0px 8px 0px 0px;
+  padding-bottom: 6px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.logo img {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 40px;
+  animation: logoanimation 1s ease-in-out;
+}
+
+@keyframes logoanimation {
+  0% {
+    left: -150px;
+  }
+
+  100% {
+    left: 10px;
+  }
+}
+
+nav ul {
+  display: flex;
+}
+
+.home,
+.contact,
+.address {
+  margin-left: 50px;
+}
+
+.body {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.body .text {
+  position: absolute;
+  top: 58vh;
+  width: 570px;
+  font-size: 22px;
+  line-height: 25px;
+  margin-left: 29vw;
+}
+
+#arpan {
+  position: absolute;
+  left: 43vw;
+  margin-top: 60px;
+}
+
+.navitem::before,
+.navitem::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navitem {
+  display: inline-block;
+  position: relative;
+  padding: 6px 10px;
+}
+
+.navitem a {
+  display: inline-block;
+}
+
+.navitem::before,
+.navitem::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: white;
+}
+
+.navitem a::before,
+.navitem a::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: white;
+}
+
+.navitem:hover::before,
+.navitem:hover::after {
+  width: 100%;
+}
+
+.navitem:hover a::before,
+.navitem:hover a::after {
+  height: 100%;
+}
+
+.navitem::before,
+.navitem::after {
+  transition-delay: 0.2s;
+}
+
+.navitem span::before,
+.navitem span::after {
+  transition-delay: 0s;
+}
+
+.navitem::before {
+  right: 0;
+  top: 0;
+}
+
+.navitem::after {
+  left: 0;
+  bottom: 0;
+}
+
+.navitem a::before {
+  left: 0;
+  top: 0;
+}
+
+.navitem a::after {
+  right: 0;
+  bottom: 0;
+}
+
+.navitem:hover::before,
+.navitem:hover::after {
+  transition-delay: 0s;
+}
+
+.navitem:hover a::before,
+.navitem:hover a::after {
+  transition-delay: 0.2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px 10px;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
+.table {
+  align-items: center;
+  font-size: 30px;
+
+}
+
+td {
+  font-size: 25px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h1 {
+  margin-top: 20px;
+  margin-left: 550px;
+  font-size: 40px;
+}
+
+.contact button {
+  margin-right: 65px;
+  width: 137px;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(to right, #000000, #191818, #1c1a1a, #262424, #1c1a1a, #191818, #000000);
+  border-radius: 20px;
+  font-size: 20px;
+  height: 39px;
+  margin-top: 20px;
+  color: white;
+}
+
+#addcontactbtn {
+  margin-right: -210px;
+}
+
+.contact button:hover {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+td i {
+  cursor: pointer;
+}
+
+.header button a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+
+.form {
+  /* border: 2px solid black; */
+  width: 809px;
+  margin-left: 15vw;
+  margin-top: -50px;
+  font-size: 30px;
+  position: absolute;
+  display: none;
+  height: 450px;
+  /* padding-left: 143px; */
+  border-radius: 10px;
+  padding-top: 30px;
+  background-color: rgb(210, 198, 198);
+  animation: 3s;
+}
+
+.form label {
+  margin-left: -490px;
+}
+
+.form input {
+  display: block;
+  margin-left: 110px;
+  margin-top: 1px;
+  width: 600px;
+  margin-bottom: 5px;
+  height: 35px;
+}
+
+.form button {
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.form i {
+  position: absolute;
+  margin-left: 27px;
+  margin-top: -10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+.login-form {
+  border: 2px solid black;
+  width: 390px;
+  height: 390px;
+  font-size: 23px;
+  justify-content: center;
+  margin-top: 100px;
+  border-radius: 20px;
+  padding-top: 20px;
+  display: flex;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: max-content;
+}
+
+.login-form form input {
+  margin-top: 10px;
+  width: 290px;
+  height: 30px;
+}
+
+.login-form form label {
+  margin-top: 10px;
+}
+
+.login-form form button {
+  margin-top: 20px;
+  width: 80px;
+  margin-left: 85px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  border: 1px solid rgb(70, 67, 67);
+  height: 30px;
+}
+
+.login-form form button:hover {
+  background-color: rgb(70, 67, 67);
+  color: white;
+}
+
+#login-box {
+  justify-content: center;
+  display: flex;
+}
+.admin{
+  margin-top: 20px;
+  position: absolute;
+  align-items: center;
+}
+
+.alert{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  z-index: -1;
+  border-radius: 0px;
+  justify-content: space-between;
+}
+.succes{
+  background-color: rgb(73, 194, 73);
+}
+.danger{
+  background-color: rgb(232, 22, 22);
+}
+.login-form h2{
+  position: absolute;
+  /* margin-top: 40px; */
+}
+.note{
+ border: 2px solid black;
+ width: 300px;
+ text-align: center;
+ padding: 10px;
+ margin-top: 40px;
+ height: 200px;
+}
+.dairyform{
+  display: flex;
+  flex-direction: column;
+}
+.dairyform textarea {
+  width: 610px;
+  font-size: 20px;
+  margin-left: 100px;
+}
+.dairyform textarea label{
+  margin-left: 20px;
+}
+.dairyform button{
+  margin-left:320px;
+}
+.noteContainer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.fa-trash-can{
+  cursor: pointer;
+}
+.fa-pen-to-square{
+  cursor: pointer;
+}
+#dairycross{
+  margin-left: 250px;
+}
