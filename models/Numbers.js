@@ -22,8 +22,6 @@ router.get("/getallnumbers",fetchUser,  async (req, res) => {
 router.post(
   "/addnumber",fetchUser,
   [
-    body("label", "Enter valid label").isLength({ min: 3 }),
-    body("name", "Enter valid name").isLength({ min: 3 }),
     body("email", "Enter valid email Id").isEmail(),
     body("number", "Enter valid number").isLength({ min: 10 }),
   ],
@@ -31,6 +29,7 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
+      
     }
     let data = await Numbers.findOne({ number: req.body.number });
     if (data) {
