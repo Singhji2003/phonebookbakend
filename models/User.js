@@ -16,7 +16,6 @@ router.post(
   [
     // validation of names emails and passwords
     body("password", "Enter valid password").isLength({ min: 5 }),
-    body("name", "Enter valid name").isLength({ min: 3 }),
     body("email", "Enter valid email Id").isEmail(),
   ],
   async (req, res) => {
@@ -24,17 +23,12 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    // no duplication of email
-    let user = await User.findOne({ email: req.body.email });
-    if (user) {
-      return res.status(400).json({ success, erorr: "Enter a unique email id" });
-    }
     // hashing the password
     const salt = bcrypt.genSaltSync(10);
     const protectPswd = bcrypt.hashSync(req.body.password, salt);
     try {
       //  Entering the data in mongoose
-      user = await User.create({
+     const user = await User.create({
         name: req.body.name,
         password: protectPswd,
         email: req.body.email,
@@ -51,6 +45,7 @@ router.post(
       res.json({success, token });
     } catch {
       {
+        console.log("Error")
         error: "Some internal Error occured";
       }
     }

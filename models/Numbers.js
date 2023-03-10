@@ -22,7 +22,6 @@ router.get("/getallnumbers",fetchUser,  async (req, res) => {
 router.post(
   "/addnumber",fetchUser,
   [
-    body("email", "Enter valid email Id").isEmail(),
     body("number", "Enter valid number").isLength({ min: 10 }),
   ],
   async (req, res) => {
@@ -31,12 +30,6 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
       
     }
-    let data = await Numbers.findOne({ number: req.body.number });
-    if (data) {
-      
-      return res.status(400).json({ erorr: "Enter a unique number" });
-    }
-
     data = await Numbers.create({
         user: req.user.id,
       name: req.body.name,
