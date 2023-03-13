@@ -8,19 +8,20 @@ const NumberSchema = new Schema({
  },
   name:{
     type:String,
-
+    default:""
   },
   number:{
     type: String,
     required: true,
+    default:""
   },
   email:{
     type:String,
-
+    default:""
   },
   label:{
     type:String,
-
+    default:""
   }
 
 });
